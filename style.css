@@ -1,0 +1,140 @@
+:root {
+    /* Palet Warna */
+    --warna-utama: #007bff;     /* Biru - untuk tombol & header */
+    --warna-aksen: #dc3545;     /* Merah - untuk peringatan & highlight */
+    --warna-latar: #ffffff;     /* Putih */
+    --warna-teks: #212529;      /* Hitam */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--warna-latar);
+    color: var(--warna-teks);
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+header {
+    background-color: var(--warna-utama);
+    color: var(--warna-latar);
+    padding: 20px 0;
+}
+
+h1, h2 {
+    color: var(--warna-utama);
+}
+
+main {
+    padding: 20px;
+    max-width: 900px;
+    margin: 20px auto;
+    background: #f8f9fa; /* Latar belakang sedikit abu-abu */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Formulir --- */
+#input-form {
+    text-align: left;
+    padding: 20px;
+    border: 1px solid var(--warna-utama);
+    border-radius: 6px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: var(--warna-utama);
+    color: var(--warna-latar);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Biru gelap saat hover */
+}
+
+/* --- Timeline Visualisasi --- */
+#future-map.hidden {
+    display: none;
+}
+
+#timeline-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-left: 3px solid var(--warna-utama);
+    padding-left: 20px;
+    margin-top: 30px;
+}
+
+.timeline-event {
+    position: relative;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: var(--warna-latar);
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    text-align: left;
+}
+
+.timeline-event::before {
+    content: '';
+    position: absolute;
+    left: -28px; /* Offset dari garis biru */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: var(--warna-utama); /* Dot biru di timeline */
+    border: 3px solid var(--warna-latar);
+}
+
+.timeline-event.highlight::before {
+    background-color: var(--warna-aksen); /* Merah untuk event penting/risiko */
+}
+
+.timeline-event h4 {
+    margin: 0 0 5px 0;
+    color: var(--warna-utama);
+}
+
+/* --- Risk Assessment --- */
+#risk-assessment {
+    margin-top: 40px;
+    padding: 20px;
+    border: 2px solid var(--warna-aksen); /* Border Merah */
+    background-color: rgba(220, 53, 69, 0.05); /* Latar belakang Merah transparan */
+    border-radius: 6px;
+}
+
+#risk-assessment h3 {
+    color: var(--warna-aksen); /* Judul Merah */
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--warna-teks); /* Hitam */
+    color: var(--warna-latar);
+    padding: 10px 0;
+    margin-top: 30px;
+}

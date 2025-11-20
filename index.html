@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Future Map - PIK-R A'FORLING</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>🧭 My Future Map</h1>
+        <p>Aplikasi Perencanaan Hidup Interaktif PIK-R A'FORLING</p>
+    </header>
+
+    <main>
+        <section id="input-form">
+            <h2>1. Rencanakan Masa Depanmu</h2>
+            <form id="future-form">
+                <label for="usia_sekolah">Usia Lulus SMA/SMK (Tahun):</label>
+                <input type="number" id="usia_sekolah" value="18" min="16" required>
+
+                <label for="usia_kuliah">Usia Lulus Kuliah/Pelatihan (Jika Ada):</label>
+                <input type="number" id="usia_kuliah" value="23" min="18" required>
+                
+                <label for="usia_karir_mapan">Usia Mulai Karir Mapan (Tahun):</label>
+                <input type="number" id="usia_karir_mapan" value="25" min="20" required>
+                
+                <label for="usia_menikah">Usia Ideal Menikah (Tahun):</label>
+                <input type="number" id="usia_menikah" value="25" min="18" required>
+
+                <button type="submit">Buat Peta Masa Depan</button>
+            </form>
+        </section>
+
+        <section id="future-map" class="hidden">
+            <h2>2. Peta Perjalananmu</h2>
+            <div id="timeline-container">
+                </div>
+            <div id="risk-assessment">
+                <h3>⚠️ Penilaian Risiko & Realitas</h3>
+                <p id="risk-text"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; PIK-R School Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
